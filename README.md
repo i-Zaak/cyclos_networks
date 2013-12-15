@@ -21,10 +21,10 @@ Export these tables from the database as a csv file with comma as a field delimi
 
 The module ``cyclos_networks.filter`` contains the functions for loading the tables into the workspace. The function ``load_tables`` serves as an entry function, 
 
-
-	import cyclos_networks.filter as lfilt
-	trans, accounts = lfilt.load_tables('data/transfers_example.csv', 
-'``data/accounts_example.csv``'``)``
+```python
+import cyclos_networks.filter as lfilt
+trans, accounts = lfilt.load_tables('data/transfers_example.csv','data/accounts_example.csv')
+```
 
 Now, you might want to remove all transactions of some accounts (for example dummy or system accounts), this can be achieved by ``remove_account`` function:
 
